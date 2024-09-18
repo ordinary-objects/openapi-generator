@@ -27,11 +27,11 @@ namespace {{packageName}}.Client
     /// <summary>
     /// To Serialize/Deserialize JSON using our custom logic, but only when ContentType is JSON.
     /// </summary>
-    internal class CustomJsonCodec
+    public class CustomJsonCodec
     {
         private readonly IReadableConfiguration _configuration;
         private static readonly string _contentType = "application/json";
-        private readonly JsonSerializerSettings _serializerSettings = new JsonSerializerSettings
+        public readonly JsonSerializerSettings _serializerSettings = new JsonSerializerSettings
         {
             // OpenAPI generated types generally hide default constructors.
             ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor,
